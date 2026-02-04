@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/glorynguyen/gitsage/compare/v1.0.0...v1.1.0) (2026-02-04)
+
+
+### Features
+
+* **server:** add list resource templates handler ([86f8e04](https://github.com/glorynguyen/gitsage/commit/86f8e047808782a8e512f76fc978c044a6c58a31))
+
 # 1.0.0 (2026-02-04)
 
 
