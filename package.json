@@ -1,0 +1,71 @@
+{
+  "name": "gitsage",
+  "version": "1.0.0",
+  "description": "AI-powered code review MCP server for Claude Desktop and Claude Code",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "gitsage": "./dist/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/glorynguyen/gitsage.git"
+  },
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "start": "node dist/index.js",
+    "dev": "tsx src/index.ts",
+    "prepare": "npm run build",
+    "semantic-release": "semantic-release"
+  },
+  "keywords": [
+    "mcp",
+    "claude",
+    "code-review",
+    "gitsage",
+    "ai"
+  ],
+  "author": "Vinh Nguyen",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "@octokit/rest": "^22.0.1",
+    "glob": "^11.0.0",
+    "js-yaml": "^4.1.0",
+    "minimatch": "^10.0.1",
+    "simple-git": "^3.27.0"
+  },
+  "devDependencies": {
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "@types/js-yaml": "^4.0.9",
+    "@types/node": "^22.0.0",
+    "semantic-release": "^25.0.3",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "files": [
+    "dist"
+  ],
+  "release": {
+    "branches": ["main"],
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/changelog",
+      "@semantic-release/npm",
+      [
+        "@semantic-release/git",
+        {
+          "assets": ["package.json", "package-lock.json", "CHANGELOG.md"],
+          "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+        }
+      ],
+      "@semantic-release/github"
+    ]
+  }
+}
