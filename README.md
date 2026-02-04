@@ -22,13 +22,13 @@ A Model Context Protocol (MCP) server that provides AI-powered code review tools
 ### Install from npm (recommended)
 
 ```bash
-npm install -g gitsage
+npm install -g @vinhnguyen/gitsage
 ```
 
 Or run without installing:
 
 ```bash
-npx gitsage
+npx @vinhnguyen/gitsage
 ```
 
 ### Install from source
@@ -57,7 +57,7 @@ Using npx (recommended, no install required):
   "mcpServers": {
     "gitsage": {
       "command": "npx",
-      "args": ["gitsage"]
+      "args": ["@vinhnguyen/gitsage"]
     }
   }
 }
@@ -102,7 +102,7 @@ Add to your `~/.claude.json` (project) or `~/.claude/settings.json` (global):
   "mcpServers": {
     "gitsage": {
       "command": "npx",
-      "args": ["gitsage"]
+      "args": ["@vinhnguyen/gitsage"]
     }
   }
 }

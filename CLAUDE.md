@@ -10,10 +10,10 @@ GitSage is a Model Context Protocol (MCP) server that provides AI-powered code r
 
 ```bash
 # Install globally from npm
-npm install -g gitsage
+npm install -g @vinhnguyen/gitsage
 
 # Or run without installing
-npx gitsage
+npx @vinhnguyen/gitsage
 ```
 
 ## Tech Stack
@@ -132,7 +132,7 @@ const prompt = buildReviewPrompt(diff, { frameworks, skills });
 1. Build: `npm run build`
 2. Test directly: `echo '{"jsonrpc":"2.0","method":"tools/list","id":1}' | node dist/index.js`
 3. Or use with Claude Desktop by adding to config
-4. Or test via npx: `echo '{"jsonrpc":"2.0","method":"tools/list","id":1}' | npx gitsage`
+4. Or test via npx: `echo '{"jsonrpc":"2.0","method":"tools/list","id":1}' | npx @vinhnguyen/gitsage`
 
 ## Common Tasks
 

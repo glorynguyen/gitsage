@@ -1,5 +1,5 @@
 {
-  "name": "gitsage",
+  "name": "@vinhnguyen/gitsage",
   "version": "1.0.0",
   "description": "AI-powered code review MCP server for Claude Desktop and Claude Code",
   "type": "module",
