@@ -14,6 +14,7 @@ import {
   ReadResourceRequestSchema,
   ListPromptsRequestSchema,
   GetPromptRequestSchema,
+  ListResourceTemplatesRequestSchema,
 } from '@modelcontextprotocol/sdk/types.js';
 
 import { GitService, findGitRepos } from './git.js';
@@ -978,6 +979,9 @@ ${branchList}`,
  * Register resource handlers
  */
 function registerResourceHandlers(server: Server): void {
+  server.setRequestHandler(ListResourceTemplatesRequestSchema, async () => ({
+    resourceTemplates: [],
+  }));
   server.setRequestHandler(ListResourcesRequestSchema, async () => ({
     resources: [
       {
