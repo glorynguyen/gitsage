@@ -57,7 +57,7 @@ Using npx (recommended, no install required):
   "mcpServers": {
     "gitsage": {
       "command": "npx",
-      "args": ["@vinhnguyen/gitsage"]
+      "args": ["-y", "@vinhnguyen/gitsage"]
     }
   }
 }
